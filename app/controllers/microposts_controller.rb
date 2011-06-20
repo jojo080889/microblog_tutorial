@@ -23,4 +23,5 @@ class MicropostsController < ApplicationController
   def authorized_user
     @micropost = current_user.microposts.where(:id => params[:id]).first
     redirect_to root_path if @micropost.nil?
+  end
 end
